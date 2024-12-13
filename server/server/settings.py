@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "laba_3.apps.Laba3Config",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

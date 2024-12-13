@@ -32,6 +32,12 @@ pip install -r requirements.txt
 django-admin startproject server 
 ```
 
+## Как создать модуль
+
+```sh
+python manage.py startapp module_name
+```
+
 ## Кака запустить джанго
 
 ```sh

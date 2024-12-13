@@ -12,7 +12,9 @@
 
 7. Приложение для изучения языков с сохранением прогресса.
 
-## Настрока Питона
+## Настрока Django
+
+### Настрока Питона
 
 Сохраняем список всех установлинных в питон пакетов
 
@@ -26,19 +28,19 @@ pip freeze > requirements.txt
 pip install -r requirements.txt
 ```
 
-## Как создать новый серер
+### Как создать новый серер
 
 ```sh
 django-admin startproject server 
 ```
 
-## Как создать модуль
+### Как создать модуль
 
 ```sh
 python manage.py startapp module_name
 ```
 
-## Кака запустить джанго
+### Кака запустить джанго
 
 ```sh
 cd server
@@ -46,12 +48,41 @@ cd server
 python manage.py runserver
 ```
 
-## Запуск Докера композа
+### Запуск Докера композа
 
 ```sh
 docker compose up
 ```
 
-## Джанго проверка
+### Джанго проверка
 
 [http://127.0.0.1:8080/](http://127.0.0.1:8080/)
+
+## Postgrs
+
+```sh
+su - postgres -c psql
+```
+
+Создание пользователя и таблицы
+
+```sql
+CREATE USER django WITH PASSWORD 'django';  
+CREATE DATABASE laba3;
+GRANT ALL ON DATABASE laba3 TO django;
+ALTER DATABASE laba3 OWNER TO django;
+```
+
+### Django
+
+Миграция для админки
+
+```sh
+python manage.py migrate
+```
+
+Создаение суперпользователя
+
+```sh
+python manage.py createsuperuser
+```

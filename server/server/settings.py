@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    "laba_3.apps.Laba3Config",
+    "laba_3.apps.Laba3Config", # модуль для Лаба №3
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -76,8 +76,13 @@ WSGI_APPLICATION = 'server.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        # Настройка доступа к базе данных
+        "ENGINE": "django.db.backends.postgresql",
+        "HOST" : "django-db", # имя берется из docker compose в поле контенера container_name
+        "PORT": 5432,
+        "NAME": "laba3",
+        "USER": "django",
+        "PASSWORD": "django",
     }
 }
 

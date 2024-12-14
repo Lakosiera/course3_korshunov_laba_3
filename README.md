@@ -12,7 +12,7 @@
 
 7. Приложение для изучения языков с сохранением прогресса.
 
-## Настрока Django
+## Настрока Django без Docker
 
 ### Настрока Питона
 
@@ -52,6 +52,20 @@ python manage.py runserver
 
 ```sh
 docker compose up
+```
+
+### Зайти в оболочку контейнера
+
+```sh
+docker exec -it container_name sh
+# docker exec -it django-db sh
+```
+
+или
+
+```sh
+docker compose exec service_name sh
+# docker compose exec db sh
 ```
 
 ### Джанго проверка

@@ -15,4 +15,9 @@ urlpatterns = [
         view=views.word_quiz,
         name="quiz",
     ),
+    path(
+        route="quiz/<int:word_id>/check/", # путь с условием (ожидает: 'quiz/2/check')
+        view=views.check,
+        name="check",
+    ),
 ]

@@ -20,4 +20,9 @@ urlpatterns = [
         view=views.check,
         name="check",
     ),
+    path(
+        route="quiz/reset/", # путь с условием
+        view=views.reset,
+        name="reset",
+    ),
 ]

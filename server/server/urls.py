@@ -16,9 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-# from . import views
 
 urlpatterns = [
+    # админка проекта
     path('admin/', admin.site.urls),
+    # подключаем пути из модуля laba_3
     path('', include("laba_3.urls")),
 ]

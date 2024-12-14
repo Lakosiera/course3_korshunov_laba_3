@@ -30,6 +30,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+# подключаем моули
 INSTALLED_APPS = [
     "laba_3.apps.Laba3Config", # модуль для Лаба №3
     'django.contrib.admin',

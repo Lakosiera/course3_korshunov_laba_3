@@ -20,7 +20,7 @@
           {% for word in word_list %}
             {% comment %}TODO active{% endcomment %}
             <li class="list-group-item list-group-item-action d-flex justify-content-between">
-              <span class="badge text-bg-secondary my-auto">{{ word.word }}</span>
+              <span class="my-quote my-auto">{{ word.word }}</span>
               <a class="btn btn-sm btn-primary" href="{% url 'quiz' word.id %}">Go</a>
             </li>
           {% endfor %}

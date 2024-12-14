@@ -17,6 +17,7 @@
       </div>
 
       <div class="card-body">
+        {{cookie_value}}
         <form action="{% url 'check' word_quiz.id %}" method="post">
           {% csrf_token %}
           <div class="d-flex align-items-center">

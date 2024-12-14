@@ -1,14 +1,17 @@
+/* класс для добавления ковычек */
 .my-quote {}
 
+/* добавдляем ковычку в начала блока */
 .my-quote:before {
     content: "«";
     color: rgb(103, 234, 182);
-    margin-right: 6px;
+    margin-right: 0.1em;
 }
 
+/* добавдляем ковычку в конец блока */
 .my-quote:after {
     content: "»";
     color: rgb(103, 234, 182);
-    margin-left: 6px;
+    margin-left: 0.1em;
 }
 

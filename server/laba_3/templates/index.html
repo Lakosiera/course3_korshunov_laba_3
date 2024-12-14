@@ -1,9 +1,9 @@
-{% if latest_question_list %}
-    {% comment %} <ul>
-    {% for question in latest_question_list %}
-        <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>
+{% if word_list %}
+    <ul>
+    {% for word in word_list %}
+        <li><a href="/quiz/{{ word.id }}/">{{ word.word }}</a></li>
     {% endfor %}
-    </ul> {% endcomment %}
+    </ul>
 {% else %} 
     <p>Модуль Лаба 3</p>
 {% endif %} 
